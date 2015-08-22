@@ -1,0 +1,25 @@
+<--Include Leaflet CSS file in the head section of your document:-->
+
+ <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+<--Include Leaflet JavaScript file:-->
+
+ <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+<--Put a div element with a certain id where you want your map to be:-->
+
+ <div id="map"></div>
+<--Make sure the map container has a defined height, for example by setting it in CSS:-->
+
+#map { height: 180px; }
+
+//set map location to central London
+
+var map=L.map('map').setview([51.505, -0.09], 13;
+
+//add lile layer to map - mapbox streets style - uses URL template API
+
+L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    maxZoom: 18,
+    id: 'your.mapbox.project.id',
+    accessToken: 'your.mapbox.public.access.token'
+}).addTo(map);
