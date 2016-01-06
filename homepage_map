@@ -12,13 +12,14 @@
   <body>
  
   <div id='map'></div>
+  
    <script type='text/javascript'>
 L.mapbox.accessToken =  'pk.eyJ1IjoibWVnYW5wZXJyeTE5NzAiLCJhIjoiMmQyMjdkN2M5MjFjNmU2OTVhYWVkNDFkZjAzN2IzYTcifQ.WiP6VMU9FsGrJkpNV5ZYiQ';
     var map = L.mapbox.map('map').setView([35.444374, 30.328831], 16);
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-
-		        .addTo(map);
+    
+    }) .addTo(map);
      </script>
   </body>
  </html>
